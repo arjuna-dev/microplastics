@@ -36,7 +36,7 @@ function draw() {
         floatingObjects[i].img.src = floatingObjects[i].source;
     }
 
-    floatingObjects[0].img.onload = function() {
+    floatingObjects[floatingObjects.length-1].img.onload = function() {
         setInterval("myAnimation()", 40);
     }
 }
