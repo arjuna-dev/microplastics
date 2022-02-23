@@ -19,7 +19,7 @@ function draw() {
     });
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
-
+    
     for (let i = 0; i < numberOfObjects; i++) {
         floatingObjects.push({
             img: new Image(this.sizeX, this.sizeY),
@@ -29,7 +29,6 @@ function draw() {
             sizeX: 22,
             sizeY: 23,
             speedX: 0.5 * (Math.random() < 0.5 ? -1 : 1),
-            // speedY: round(0.1 * Math.sin(this.positionX * 0.1)),
             frameSpeed: 1,
             frame: 0,
         });
@@ -42,9 +41,11 @@ function draw() {
 }
 
 function myAnimation() {
+    
     ctx.clearRect(0, 0, canvas_size_x, canvas_size_y);
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
 
     for (let i = 0; i < floatingObjects.length; i++) {
         if (floatingObjects[i].positionX < -30 || floatingObjects[i].positionX > canvas_size_x - 30) {
@@ -73,7 +74,14 @@ let canvas = document.createElement("canvas");
 canvas.width = canvas_size_x;
 canvas.height = canvas_size_y;
 canvas.id = "canvas";
+
+let canvas2 = document.createElement("div");
+canvas2.width = canvas_size_x;
+canvas2.height = canvas_size_y;
+canvas2.id = "canvas2";
+
 document.getElementsByTagName('body')[0].appendChild(canvas);
+document.getElementsByTagName('body')[0].appendChild(canvas2);
 
 
 function getRandomInt(max) {
