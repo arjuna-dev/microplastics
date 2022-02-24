@@ -9,12 +9,20 @@ canvas {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  -webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation:    fadeout 15s; /* Firefox < 16 */
-   -ms-animation:    fadeout 15s; /* Internet Explorer */
-    -o-animation:    fadeout 15s; /* Opera < 12.1 */
-       animation:    fadeout 15s;
-  opacity: 0;
+  -webkit-animation: fadeout 25s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation:    fadeout 25s; /* Firefox < 16 */
+  -ms-animation:    fadeout 25s; /* Internet Explorer */
+    -o-animation:    fadeout 25s; /* Opera < 12.1 */
+    animation:    fadeout 25s;
+    opacity: 0;
+}
+
+#canvas3 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  /* background-color: white; */
 }
 
 @keyframes fadeout {

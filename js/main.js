@@ -80,9 +80,21 @@ canvas2.width = canvas_size_x;
 canvas2.height = canvas_size_y;
 canvas2.id = "canvas2";
 
+let canvas3 = document.createElement("div");
+canvas3.width = canvas_size_x;
+canvas3.height = canvas_size_y;
+canvas3.id = "canvas3";
+
 document.getElementsByTagName('body')[0].appendChild(canvas);
 document.getElementsByTagName('body')[0].appendChild(canvas2);
+document.getElementsByTagName('body')[0].appendChild(canvas3);
 
+
+setTimeout(erradicateCanv3, 2500);
+
+function erradicateCanv3() {
+    document.getElementById("canvas3").style.display = "none"
+  }
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
